@@ -43,6 +43,13 @@ describe("Frame", function () {
       }).toThrowError("select a valid roll");
 
     });
+    it("when 10th frame", function () {
+      var frame = new Frame(10);
+      frame.setRoll(3, 6);
+      expect(frame.roll_third).toEqual(6);
+
+    });
+
   })
 });
 

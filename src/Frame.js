@@ -17,9 +17,13 @@ Frame.prototype.setRoll = function (roll_number, pin) {
     this.roll_second = pin;
 
   }
+  else if (roll_number === 3 && this.frameNo === 10) {
+    this.roll_third = pin;
+  }
   else
     throw new Error("select a valid roll");
 }
+
 
 
 
