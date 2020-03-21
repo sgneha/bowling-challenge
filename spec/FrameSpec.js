@@ -26,6 +26,22 @@ describe("Frame", function () {
       expect(frame.getFrameStatus()).toEqual("regular")
     });
   })
+  describe("sets the number of pins knocked down", function () {
+    it("when first roll in a frame", function () {
+      frame.setRoll(1, 8);
+      expect(frame.roll_one).toEqual(8);
+
+    });
+    it("when second roll in a frame", function () {
+      frame.setRoll(2, 6);
+      expect(frame.roll_second).toEqual(6);
+
+    });
+    it("when wrong roll_number", function () {
+      expect(frame.setRoll(3, 6)).toEqual("select valid roll");
+
+    });
+  })
 });
 
 
