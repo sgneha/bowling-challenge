@@ -19,9 +19,6 @@ Frame.prototype.setRoll = function (roll_number, pin) {
   }
   else
     return "select valid roll";
-
-
-
 }
 
 
