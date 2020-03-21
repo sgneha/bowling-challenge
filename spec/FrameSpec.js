@@ -38,7 +38,9 @@ describe("Frame", function () {
 
     });
     it("when wrong roll_number", function () {
-      expect(frame.setRoll(3, 6)).toEqual("select valid roll");
+      expect(function () {
+        frame.setRoll(3, 6);
+      }).toThrowError("select a valid roll");
 
     });
   })
