@@ -9,3 +9,10 @@ Game.prototype.addFrame = function (frame) {
     this.frames.push(frame);
 
 }
+Game.prototype.calculateScore = function () {
+    var score = 0;
+    for (var i = 0; i < this.currentFrame; i++) {
+        score += this.frames[i].roll_one + this.frames[i].roll_second;
+    }
+    return score;
+}
